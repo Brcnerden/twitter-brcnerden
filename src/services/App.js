@@ -2,8 +2,9 @@
 //bir şifre tekrar inputu ve submit butonu olacak,
 //services / auth.js içinden createUser servisi çağırılacak.\\
 
-import { useState, useEffect } from "react";
-import { FormUser } from "./api/components/FormUser";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+import { FormUser } from "../api/components/FormUser";
 import "./index.css";
 
 function App() {
@@ -49,17 +50,22 @@ function App() {
     },
   ];
 
+  const auth = getAuth();
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
+  const {
+    createUser,
+  } = async () => {
+    await createUserWithEmailAndPassword(auth, values.email, values.password);
+  };
+  //sanırım burda values.email değerini almıyor ondan hata veriyor
+
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-
-  useEffect(() => {
-    fetch(`./services/auth.js`).then((response) => console.log(response));
-  }, []);
 
   return (
     <div className="app">
@@ -70,10 +76,11 @@ function App() {
             {...input}
             value={values[input.name]}
             onChange={onChange}
+            values={values}
           />
         ))}
 
-        <button>Submit</button>
+        <button onClick={createUser}>Submit</button>
       </form>
     </div>
   );

@@ -2,11 +2,11 @@ import React from "react";
 import "../../index.css";
 
 export const FormUser = (props) => {
-  const { onChange, id, error, ...inputProps } = props;
+  const { id, error, values, ...inputProps } = props;
   return (
     <div>
-      <input {...inputProps} onChange={onChange} />
-      <span>{error}</span>
+      <input {...inputProps} />
+      {values ? " " : <span>{error} </span>}
     </div>
   );
 };

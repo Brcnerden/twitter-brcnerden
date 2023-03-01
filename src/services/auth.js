@@ -4,7 +4,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-import { FIREBASE_APP } from "../api/firebase-config";
+import { FIREBASE_APP } from "../api/components/firebase-config";
 
 const auth = getAuth(FIREBASE_APP);
 
@@ -16,4 +16,4 @@ const createUser = async (email, password) =>
 const signInUser = async (email, password) =>
   signInWithEmailAndPassword(auth, email, password);
 
-export { createUser, signInUser };
+export { createUser, signInUser, auth };
