@@ -2,11 +2,11 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   signInWithEmailAndPassword,
-} from 'firebase/auth';
+} from "firebase/auth";
 
-import { FIREBASE_APP } from '../api/firebase-config';
+import { FIREBASE_APP } from "../api/firebase-config";
 
-const auth = getAuth(FIREBASE_APP);
+const auth = getAuth(FIREBASE_APP); // kullanmak istediğin Firebase hizmetini başlatma işlevine aktarır.
 
 // geriye dönüşte data.user kontrol edilecek var ise devam, yok ise hataya düşer hatayı ekrana error.message olarak basabilirsin.
 const createUser = async (email, password) =>
