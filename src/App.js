@@ -2,13 +2,11 @@
 //bir şifre tekrar inputu ve submit butonu olacak,
 //services / auth.js içinden createUser servisi çağırılacak.\\
 
-import { useState } from "react";
-import { FormUser } from "./components/FormUser";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-
-import { FIREBASE_APP } from "../src/api/firebase-config";
-
-const auth = getAuth(FIREBASE_APP);
+import { useEffect, useState } from "react";
+import FormInput from "./components/FormInput";
+import { createAuth, isUserSingIn } from "./services/auth";
+import validateEmail from "./utils/emailCheck";
+import { createUser } from "./services/user";
 
 function App() {
   const [isSubmitted, setSubmmited] = useState(false);
@@ -19,19 +17,45 @@ function App() {
     password2: "",
   });
 
+  useEffect(() => {
+    isUserSingIn((user) => {
+      console.log("user", user);
+    });
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmmited(true);
-    console.log("submit", values);
 
-    const createUser = async (email, password) =>
-      await createUserWithEmailAndPassword(auth, email, password).catch(
-        (error) => {
-          console.log(error);
+    createAuth(values.email, values.password)
+      .then((userCredential) => {
+        console.log(userCredential);
+        if (userCredential.user.uid) {
+          createUser(userCredential.user.uid, {
+            name: "",
+            surName: "",
+            email: userCredential.user.email,
+            nickName: "",
+            desc: "",
+            joinDate: "",
+            followers: [],
+            following: [],
+            tweets: [],
+          })
+            .then((data) => console.log("data", data))
+
+            .catch((error) => console.log("error", error));
         }
-      );
 
-    console.log(createUser.user);
+        console.log(userCredential.user.uid);
+      })
+
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        console.log(error);
+      });
   };
 
   const onChange = (e) => {
@@ -41,7 +65,7 @@ function App() {
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
-        <FormUser
+        <FormInput
           type="text"
           value={values.name}
           onChange={onChange}
@@ -51,18 +75,18 @@ function App() {
           error={values.name === "" && isSubmitted}
           required
         />
-        <FormUser
+        <FormInput
           value={values.email}
           onChange={onChange}
           placeholder="email"
           name="email"
-          errorText={
-            values.email === " " ? "Email giriniz" : "email adresi hatalı"
+          errorText={values.email === "" ? "Email giriniz" : "email hatalı"}
+          error={
+            (values.email === "" || !validateEmail(values.email)) && isSubmitted
           }
-          error={values.email === "" || (!(<validateEmail />) && isSubmitted)}
           required
         />
-        <FormUser
+        <FormInput
           value={values.password}
           onChange={onChange}
           placeholder="password"
@@ -72,7 +96,7 @@ function App() {
           error={values.password === "" && isSubmitted}
           required
         />
-        <FormUser
+        <FormInput
           value={values.password2}
           onChange={onChange}
           placeholder="password again"

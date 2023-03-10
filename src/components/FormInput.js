@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export const FormUser = (props) => {
+export const FormInput = (props) => {
   const { id, error, errorText, ...inputProps } = props;
 
   return (
