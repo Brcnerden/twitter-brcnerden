@@ -17,6 +17,8 @@ function App() {
     password2: "",
   });
 
+  const [error, setError] = useState("");
+
   useEffect(() => {
     isUserSingIn((user) => {
       console.log("user", user);
@@ -51,10 +53,7 @@ function App() {
       })
 
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-
-        console.log(error);
+        setError(error.code);
       });
   };
 
@@ -114,6 +113,7 @@ function App() {
           required
         />
         <button onClick={handleSubmit}>Submit</button>
+        <span className="error">{error}</span>
       </form>
     </div>
   );

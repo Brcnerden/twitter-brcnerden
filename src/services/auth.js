@@ -17,6 +17,6 @@ const createAuth = async (email, password) =>
 const signInUser = async (email, password) =>
   signInWithEmailAndPassword(auth, email, password);
 
-const isUserSingIn = async (callback) => onAuthStateChanged(auth, callback);
+const isUserSingIn = async (callback) => onAuthStateChanged(auth, callback); //kullanıcının giriş yapıp yapmadığını kontrol eder.
 
 export { createAuth, signInUser, isUserSingIn };
