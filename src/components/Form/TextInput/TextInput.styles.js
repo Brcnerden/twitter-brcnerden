@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const Contanier = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   padding: 0 16px;
   border-radius: 16px;
 `;
@@ -15,6 +15,7 @@ const Label = styled.label`
 
 const Input = styled.input`
   border: 1px solid #5e5b5b;
-  border-radius: 5px;
+  border-radius: 20px;
+  margin: 0;
 `;
 export { Contanier, Label, Input };
