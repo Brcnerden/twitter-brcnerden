@@ -17,5 +17,17 @@ const Input = styled.input`
   border: 1px solid #5e5b5b;
   border-radius: 20px;
   margin: 0;
+  padding: 15px;
+
+  @media screen and (min-width: 900px) {
+  }
 `;
-export { Contanier, Label, Input };
+
+const Error = styled.span`
+  color: red;
+  font-size: 12px;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+`;
+
+export { Contanier, Label, Input, Error };

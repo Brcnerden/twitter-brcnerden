@@ -8,11 +8,9 @@ const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <S.Contanier>
-      <S.Label htmlFor={props.id || props.name}>{label}</S.Label>
-      <S.Input className="text-input" {...field} {...props} />
-      {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-      ) : null}
+      {label && <S.Label htmlFor={props.id || props.name}>{label}</S.Label>}
+      <S.Input {...field} {...props} />
+      {meta.touched && meta.error ? <S.Error>{meta.error}</S.Error> : null}
     </S.Contanier>
   );
 };

@@ -11,23 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-input {
-  padding: 15px;
-  margin: 10px 0px;
-  border: 2px solid black;
-}
-
-span.error {
-  font-size: 12px;
-  color: red;
-  padding: 3px;
-  display: block;
-}

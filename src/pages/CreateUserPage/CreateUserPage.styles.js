@@ -37,8 +37,11 @@ const Wrapper = styled.div`
     border: none;
     border-radius: 20px;
     padding: 15px;
-    width: 91%;
-    margin-left: 18px;
+    width: 90%;
+    margin-left: 16px;
+  }
+  @media screen and (min-width: 600px) {
+    min-width: 150px;
   }
 `;
 
@@ -47,4 +50,11 @@ const Form = styled.div`
   margin: 0 auto;
 `;
 
-export { Contanier, Wrapper, Icons, Form, Title };
+const ErrorMsj = styled.span`
+  color: red;
+  font-size: 15px;
+  padding-left: 1rem;
+  margin-top: 1rem;
+`;
+
+export { Contanier, Wrapper, Icons, Form, Title, ErrorMsj };

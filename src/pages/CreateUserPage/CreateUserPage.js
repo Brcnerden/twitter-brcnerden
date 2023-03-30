@@ -1,11 +1,14 @@
 import { Formik } from "formik";
-import React from "react";
 import { TextInput } from "../../components/Form/TextInput/TextInput";
 import * as S from "./CreateUserPage.styles";
 import * as Yup from "yup";
 import Icon from "../../components/Icon/Icon";
+import { createAuth } from "../../services/auth";
+import { useState } from "react";
 
 const CreateUserPage = () => {
+  const [error, setError] = useState("");
+
   return (
     <S.Contanier>
       <S.Wrapper>
@@ -25,9 +28,18 @@ const CreateUserPage = () => {
               password: Yup.string().required("Please enter password"),
               password2: Yup.string().required("Please password again "),
             })}
-            onSubmit={(values) => {
-              // same shape as initial values
-              console.log(values);
+            onSubmit={(values, { resetForm }) => {
+              resetForm({ values: "" });
+              createAuth(values.email, values.password)
+                .then((userCredential) => {
+                  // Signed in
+                  const user = userCredential.user;
+
+                  console.log("user", user);
+                })
+                .catch((error) => {
+                  setError(error.code);
+                });
             }}
           >
             {(formikProps) => (
@@ -38,9 +50,18 @@ const CreateUserPage = () => {
                   name="email"
                   placeholder="please enter your Email"
                 />
-                <TextInput type="password" name="password" />
-                <TextInput type="password" name="password2" />
+                <TextInput
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                />
+                <TextInput
+                  type="password"
+                  name="password2"
+                  placeholder="password again"
+                />
                 <button type="submit">Submit</button>
+                <S.ErrorMsj>{error}</S.ErrorMsj>
               </form>
             )}
           </Formik>
