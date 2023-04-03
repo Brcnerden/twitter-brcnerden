@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import Icon from "../../components/Icon/Icon";
 import { createAuth } from "../../services/auth";
 import { useState } from "react";
+import { createUser } from "../../services/user";
 
 const CreateUserPage = () => {
   const [error, setError] = useState("");
@@ -34,6 +35,21 @@ const CreateUserPage = () => {
                 .then((userCredential) => {
                   // Signed in
                   const user = userCredential.user;
+                  createUser(user.uid, {
+                    id: user.uid,
+                    name: values.name,
+                    email: values.email,
+                    likes: [],
+                    nickname: "",
+                    discription: "",
+                    createDate: Date.now(),
+                  })
+                    .then(() => {
+                      alert("success");
+                    })
+                    .catch((e) => {
+                      console.log(e);
+                    });
 
                   console.log("user", user);
                 })
