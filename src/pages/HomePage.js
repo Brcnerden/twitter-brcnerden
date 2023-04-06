@@ -1,7 +1,21 @@
 import React from "react";
-import { useUserAuth } from "../ContextPage/UserContext";
-import { Navigate } from "react-router-dom";
+import { userSingOut } from "../services/auth";
 
 export const HomePage = () => {
-  return <div>HomePage</div>;
+  const handleLogOut = () => {
+    userSingOut()
+      .then(() => {
+        console.log("sucsess");
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  };
+
+  return (
+    <>
+      <div>HomePage</div>
+      <button onClick={handleLogOut}>çıkış yap </button>
+    </>
+  );
 };

@@ -3,6 +3,7 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 
 import { FIREBASE_APP } from "../api/firebase-config";
@@ -19,4 +20,6 @@ const signInUser = async (email, password) =>
 
 const isUserSingIn = async (callback) => onAuthStateChanged(auth, callback); //kullanıcının giriş yapıp yapmadığını kontrol eder.
 
-export { createAuth, signInUser, isUserSingIn };
+const userSingOut = async () => signOut(auth);
+
+export { createAuth, signInUser, isUserSingIn, userSingOut };
