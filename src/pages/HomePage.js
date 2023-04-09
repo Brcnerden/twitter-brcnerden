@@ -1,11 +1,15 @@
 import React from "react";
 import { userSingOut } from "../services/auth";
+import { UserAuthContext } from "../ContextPage/UserContext";
+import { useContext } from "react";
 
 export const HomePage = () => {
+  const { setUser } = useContext(UserAuthContext);
+
   const handleLogOut = () => {
     userSingOut()
       .then(() => {
-        console.log("sucsess");
+        setUser(null); // eger kullanıcı başarı ile çıkış yaptıysa user 'ın boş kalır
       })
       .catch((err) => {
         console.log("err", err);

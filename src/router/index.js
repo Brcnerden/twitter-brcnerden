@@ -2,30 +2,31 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import { CreateUserPage } from "../pages/CreateUserPage";
 import { HomePage } from "../pages/HomePage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
+import { ROUTES } from "../constants/routes";
 
 const GUEST_ROUTER = createBrowserRouter([
   {
-    path: "/createuser",
+    path: ROUTES.createUser,
     element: <CreateUserPage />,
   },
   {
-    path: "/loginpage",
+    path: ROUTES.login,
     element: <LoginPage />,
   },
   {
     path: "*",
-    element: <Navigate to="/loginpage" />,
+    element: <Navigate to={ROUTES.login} />,
   },
 ]);
 
 const USER_ROUTER = createBrowserRouter([
   {
-    path: "/",
+    path: ROUTES.home,
     element: <HomePage />,
   },
   {
     path: "*",
-    element: <Navigate to="/" />, //hatalı sayfa geldiğinde sayfayı tekrar home page getirmesi için navigate kullandık
+    element: <Navigate to={ROUTES.home} />, //hatalı sayfa geldiğinde sayfayı tekrar home page getirmesi için navigate kullandık
   },
 ]);
 

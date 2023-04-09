@@ -1,78 +1,66 @@
-import { ErrorMessage, Formik } from "formik";
+import { Formik } from "formik";
 import * as Yup from "yup";
 import React, { useState } from "react";
-import GoogleLogo from "../../components/Icon/svg/GoogleLogo";
-import TwitterLogo from "../../components/Icon/svg/Logo";
 import { signInUser } from "../../services/auth";
+import { TextInput } from "../../components/Form/TextInput/TextInput";
 
 import * as L from "./LoginPage.styles";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../constants/routes";
+import { getErrorMessages } from "../../utils/getErrorMessages";
+import { GuestLayuot } from "../../components/GuestLayuot/GuestLayuot";
+import { ButtonSubmit } from "../../components/ButtonSubmit";
 
 export const LoginPage = () => {
   const [error, setError] = useState();
 
   return (
-    <div>
-      <L.Container>
-        <L.Form>
-          <TwitterLogo />
-          <h2>Sing In to Twitter</h2>
-          <L.SingButton>
-            <L.Google>
-              <GoogleLogo />
-            </L.Google>
-            Sing in with Google
-          </L.SingButton>
-          <L.SingButton>
-            <L.Google>
-              <GoogleLogo />
-              {/* // apple logosunu girmek istediğimde uyarı yazısı verdi ondan
-              // ikisini aynı logo girdim. */}
-            </L.Google>
-            Sing in with Apple
-          </L.SingButton>
-          <hr></hr>
-          <span>Or</span>
-          <Formik
-            initialValues={{ password: "", name: "" }}
-            validationSchema={Yup.object({
-              password: Yup.string(),
-              name: Yup.string(),
-            })}
-            onSubmit={(values) => {
-              signInUser(values.password, values.name)
-                .then((userCredential) => {
-                  // Signed in
-                  const user = userCredential.user;
-                  console.log("user", user);
-                  if (userCredential.user.uid) {
-                  }
-                  // ...
-                })
-                .catch((error) => {
-                  setError(ErrorMessage);
+    <GuestLayuot>
+      <Formik
+        initialValues={{ password: "", email: "" }}
+        validationSchema={Yup.object({
+          password: Yup.string().required("Please enter password"),
+          email: Yup.string()
+            .email("wrong email")
+            .required("please enter email"),
+        })}
+        onSubmit={(values) => {
+          console.log("values", values);
 
-                  console.log(ErrorMessage);
-                });
-            }}
-          >
-            {(formikProps) => (
-              <form onSubmit={formikProps.handleSubmit}>
-                {/* TextInput yazdıgımda hata verdi  */}
-                <L.InputPassword
-                  type="password"
-                  placeholder="name or password"
-                />
-                <L.LoginButton type="submit">Login</L.LoginButton>
-                <span>{error}</span>
-              </form>
-            )}
-          </Formik>
-          <L.SingButton>Forget Password</L.SingButton>
-          <p>
-            Don't have an account<a>Sing Up</a>
-          </p>
-        </L.Form>
-      </L.Container>
-    </div>
+          signInUser(values.email, values.password) // email password sıralamasına dikkat etmelisin
+            .then((userCredential) => {
+              console.log("user login success");
+              const user = userCredential.user;
+              console.log("user", user);
+              if (userCredential.user.uid) {
+              }
+              // ...
+            })
+            .catch((error) => {
+              setError(getErrorMessages(error.code));
+            });
+        }}
+      >
+        {(formikProps) => (
+          <form onSubmit={formikProps.handleSubmit}>
+            <TextInput name="email" type="email" placeholder="email " />
+            <TextInput
+              type="password"
+              name="password"
+              placeholder="please enter your password"
+            />
+
+            <ButtonSubmit type="submit" typeColor="typeColor" label="Login" />
+
+            <L.ErrorButton>{error}</L.ErrorButton>
+          </form>
+        )}
+      </Formik>
+      <ButtonSubmit typeColor="typeColor" label="Forget Password" />
+      <L.ForgetPassword>
+        <p>Don't have an account </p>
+        <Link to={ROUTES.createUser}>Sing Up</Link>
+      </L.ForgetPassword>
+    </GuestLayuot>
   );
 };
