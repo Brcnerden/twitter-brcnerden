@@ -2,6 +2,7 @@ import React from "react";
 import { userSingOut } from "../services/auth";
 import { UserAuthContext } from "../ContextPage/UserContext";
 import { useContext } from "react";
+import { Layout } from "../components/Layout/Layout";
 
 export const HomePage = () => {
   const { setUser } = useContext(UserAuthContext);
@@ -18,8 +19,9 @@ export const HomePage = () => {
 
   return (
     <>
-      <div>HomePage</div>
-      <button onClick={handleLogOut}>çıkış yap </button>
+      <Layout>
+        <button onClick={handleLogOut}>çıkış yap </button>
+      </Layout>
     </>
   );
 };
