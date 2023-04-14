@@ -6,6 +6,7 @@ const Contanier = styled.div`
   min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
-  background-color: red;
+  border: 2px solid black;
+  display: flex;
 `;
 export { Contanier };

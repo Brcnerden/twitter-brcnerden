@@ -1,6 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import { CreateUserPage } from "../pages/CreateUserPage";
-import { HomePage } from "../pages/HomePage";
+import { HomePage } from "../pages/HomePage/HomePage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
 import { ROUTES } from "../constants/routes";
 
