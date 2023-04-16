@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
   max-width: 275px;
@@ -6,19 +7,38 @@ const Contanier = styled.div`
   background-color: FFFFFF;
   margin-bottom: 5px;
   font-size: 15px;
-  font-weight: 700;
-  padding: 15px;
+  font-weight: bold;
 `;
 
-const Bar = styled.div`
+const Bar = styled.li`
+  display: flex;
+  margin-bottom: 30px;
+  padding-left: 50px;
+
   svg {
     width: 36px;
     height: 36px;
-    fill: #08a0e9;
     padding-right: 5px;
   }
-  display: flex;
-  color: #08a0e9;
+  a:-webkit-any-link {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: ${COLORS.black.$500};
+  }
+
+  :hover {
+    background-color: #add8e6;
+    border-radius: 50px;
+  }
+
+  @media screen and (max-width: 992px) {
+    > div {
+      display: none;
+    }
+  }
 `;
 
 const TweetButton = styled.button`
@@ -33,4 +53,14 @@ const TweetButton = styled.button`
   margin-left: 20px;
 `;
 
-export { Contanier, Bar, TweetButton };
+const BirdIcon = styled.div`
+  fill: ${COLORS.blue.$500};
+  padding: 15px 50px;
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+`;
+
+export { Contanier, Bar, TweetButton, BirdIcon };

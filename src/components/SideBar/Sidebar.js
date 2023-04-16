@@ -9,61 +9,58 @@ import {
   TwitterBlueIcon,
   ProfileIcon,
   MoreIcon,
+  TwitterIcon,
 } from "../Icon/svg/IconSideBar";
+import { ButtonSubmit } from "../ButtonSubmit/ButtonSubmit";
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   return (
     <S.Contanier>
-      <S.Bar>
-        <span>
+      <nav>
+        <S.BirdIcon>
+          <TwitterIcon />
+        </S.BirdIcon>
+        <S.Bar>
           <HomeIcon />
-        </span>
-        <span>Home</span>
-      </S.Bar>
-      <S.Bar>
-        <span>
+          <Link to="/">Home</Link>
+        </S.Bar>
+        <S.Bar>
           <HangtagIcon />
-        </span>
-        <span>Explore</span>
-      </S.Bar>
-      <S.Bar>
-        <span>
+          <Link to="/">Explore</Link>
+        </S.Bar>
+        <S.Bar>
           <BellIcon />
-        </span>
-        <span>Notifications</span>
-      </S.Bar>
-      <S.Bar>
-        <span>
+          <Link to="/">Notifications</Link>
+        </S.Bar>
+        <S.Bar>
           <EmailIcon />
-        </span>
-        <span>Messages</span>
-      </S.Bar>
-      <S.Bar>
-        <span>
+          <Link to="/">Messages</Link>
+        </S.Bar>
+        <S.Bar>
           <BookMarksIcon />
-        </span>
-        <span>Bookmarks</span>
-      </S.Bar>
-      <S.Bar>
-        <span>
+          <Link to="/">Bookmarks</Link>
+        </S.Bar>
+        <S.Bar>
           <TwitterBlueIcon />
-        </span>
-        <span>Lists</span>
-      </S.Bar>
-      <S.Bar>
-        <span>
+          <Link to="/">Lists</Link>
+        </S.Bar>
+        <S.Bar>
           <ProfileIcon />
-        </span>
-        <span>Profile</span>
-      </S.Bar>
-      <S.Bar>
-        <span>
+          <Link to="/">Profile</Link>
+        </S.Bar>
+        <S.Bar>
           <MoreIcon />
-        </span>
-        <span>More</span>
-      </S.Bar>
-
-      <S.TweetButton>Tweet</S.TweetButton>
+          <Link to="/">More</Link>
+        </S.Bar>
+        <S.TweetButton>Tweet</S.TweetButton>
+        <ButtonSubmit
+          onClick={() => {
+            alert("burçin");
+          }}
+          label={"burçin"}
+        />
+      </nav>
     </S.Contanier>
   );
 };

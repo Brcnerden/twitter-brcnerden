@@ -1,6 +1,9 @@
-import React, { Children } from "react";
-import * as S from "../ButtonSubmit/ButtonSubmit.styled";
+import * as S from "./ButtonSubmit.styled";
 
-export const ButtonSubmit = ({ label, typeColor, ...props }) => {
-  return <S.SubmitButton typeColor={typeColor}>{label}</S.SubmitButton>;
+export const ButtonSubmit = ({ label, color, ...rest }) => {
+  return (
+    <S.SubmitButton {...rest} color={color}>
+      {label}
+    </S.SubmitButton>
+  );
 };

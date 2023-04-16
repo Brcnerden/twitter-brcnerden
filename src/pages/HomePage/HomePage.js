@@ -1,6 +1,6 @@
 import React from "react";
 import { userSingOut } from "../../services/auth";
-import { UserAuthContext } from "../../ContextPage/UserContext";
+import { UserAuthContext } from "../../contextPage/UserContext";
 import { useContext } from "react";
 import { Layout } from "../../components/Layout/Layout";
 import { Sidebar } from "../../components/SideBar/Sidebar";
@@ -27,7 +27,7 @@ export const HomePage = () => {
         <FeedPage />
         <TimeLine />
       </Layout>
-      <button onClick={handleLogOut}>çıkış yap </button>
+      <button onClick={handleLogOut}>Çıkış yap</button>
     </>
   );
 };

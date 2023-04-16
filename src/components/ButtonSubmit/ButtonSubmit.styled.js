@@ -1,10 +1,22 @@
 import styled from "@emotion/styled";
+import { COLORS } from "../../theme/colors";
+
+const colorTypeComboS = {
+  blue: {
+    background: COLORS.blue.$500,
+    color: COLORS.white.$500,
+  },
+  black: {
+    background: COLORS.black.$500,
+    color: COLORS.white.$500,
+  },
+  transparent: {
+    background: COLORS.white.$600,
+    color: COLORS.black.$500,
+  },
+};
 
 const SubmitButton = styled.button`
-  background-color: ${({ typeColor }) =>
-    typeColor
-      ? "red"
-      : "blue"}; // renkleri okumuyor ama font size da kullanabildim ?
   width: 100%;
   padding: 15px 0;
   display: flex;
@@ -15,6 +27,9 @@ const SubmitButton = styled.button`
   border: 0;
   font-size: 15px;
   font-weight: 500;
+  ${({ color }) => {
+    return colorTypeComboS[color] || colorTypeComboS.blue;
+  }}
 `;
 
 export { SubmitButton };

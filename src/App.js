@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { GUEST_ROUTER, USER_ROUTER } from "./router";
 import { RouterProvider } from "react-router-dom";
-import { UserAuthContext } from "./ContextPage/UserContext";
+import { UserAuthContext } from "./contextPage/UserContext";
 import { isUserSingIn } from "./services/auth";
 
 function App() {
