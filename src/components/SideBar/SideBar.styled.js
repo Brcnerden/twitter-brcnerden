@@ -8,6 +8,14 @@ const Contanier = styled.div`
   margin-bottom: 5px;
   font-size: 15px;
   font-weight: bold;
+  > nav {
+    @media screen and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 50px;
+    }
+  }
 `;
 
 const Bar = styled.li`
@@ -18,8 +26,8 @@ const Bar = styled.li`
   svg {
     width: 36px;
     height: 36px;
-    padding-right: 5px;
   }
+
   a:-webkit-any-link {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
@@ -27,17 +35,16 @@ const Bar = styled.li`
     line-height: 24px;
     text-decoration: none;
     color: ${COLORS.black.$500};
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
   }
 
   :hover {
     background-color: #add8e6;
     border-radius: 50px;
-  }
-
-  @media screen and (max-width: 992px) {
-    > div {
-      display: none;
-    }
+    padding-right: 50px;
+    padding-top: 5px;
   }
 `;
 
@@ -58,9 +65,20 @@ const BirdIcon = styled.div`
   padding: 15px 50px;
 
   svg {
+    display: block;
     width: 50px;
     height: 50px;
   }
+
+  @media screen and (max-width: 992px) {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
 `;
 
-export { Contanier, Bar, TweetButton, BirdIcon };
+const HoverStyle = styled.div`
+  display: inline-block;
+`;
+
+export { Contanier, Bar, TweetButton, BirdIcon, HoverStyle };
