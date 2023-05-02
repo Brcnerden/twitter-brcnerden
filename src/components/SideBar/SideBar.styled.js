@@ -2,12 +2,14 @@ import styled from "@emotion/styled";
 import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   max-width: 275px;
   width: 100%;
   background-color: FFFFFF;
   margin-bottom: 5px;
   font-size: 15px;
   font-weight: bold;
+  line-height: 24px;
   > nav {
     @media screen and (max-width: 992px) {
       display: flex;
@@ -26,6 +28,7 @@ const Bar = styled.li`
   svg {
     width: 36px;
     height: 36px;
+    margin-bottom: -10px;
   }
 
   a:-webkit-any-link {
@@ -35,6 +38,7 @@ const Bar = styled.li`
     line-height: 24px;
     text-decoration: none;
     color: ${COLORS.black.$500};
+    line-height: 24px;
     @media screen and (max-width: 992px) {
       display: none;
     }
@@ -56,13 +60,31 @@ const TweetButton = styled.button`
   color: white;
   border: none;
   border-radius: 50px;
-  margin-top: 50px;
   margin-left: 20px;
+  > span {
+    display: none;
+  }
+  @media screen and (max-width: 992px) {
+    width: 36px;
+    height: 36px;
+    > div {
+      display: none;
+    }
+    > span {
+      display: flex;
+      align-items: center;
+
+      > svg {
+        fill: ${COLORS.white.$500};
+      }
+    }
+  }
 `;
 
 const BirdIcon = styled.div`
   fill: ${COLORS.blue.$500};
-  padding: 15px 50px;
+  margin-bottom: 30px;
+  padding-left: 50px;
 
   svg {
     display: block;

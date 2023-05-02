@@ -8,11 +8,12 @@ import {
   TwitterBlueIcon,
   ProfileIcon,
   MoreIcon,
-  TwitterIcon,
+  TweetPhoneIcon,
 } from "../Icon/svg/IconSideBar";
 import { Link } from "react-router-dom";
 import HomeIcon from "../Icon/svg/HomeIcon";
 import { UserProfileBox } from "../UserProfileBox/UserProfileBox";
+import TwitterLogo from "../Icon/svg/Logo";
 
 export const Sidebar = () => {
   return (
@@ -20,7 +21,7 @@ export const Sidebar = () => {
       <S.Contanier>
         <nav>
           <S.BirdIcon>
-            <TwitterIcon />
+            <TwitterLogo />
           </S.BirdIcon>
           <S.HoverStyle>
             <S.Bar>
@@ -57,7 +58,12 @@ export const Sidebar = () => {
             <MoreIcon />
             <Link to="/">More</Link>
           </S.Bar>
-          <S.TweetButton>Tweet</S.TweetButton>
+          <S.TweetButton>
+            <div>Tweet</div>
+            <span>
+              <TweetPhoneIcon />
+            </span>
+          </S.TweetButton>
         </nav>
         <UserProfileBox />
       </S.Contanier>
