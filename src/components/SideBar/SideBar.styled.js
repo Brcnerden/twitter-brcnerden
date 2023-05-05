@@ -3,6 +3,7 @@ import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   max-width: 275px;
   width: 100%;
   background-color: FFFFFF;
