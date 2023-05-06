@@ -7,6 +7,10 @@ import BigMouth from "../../theme/image/BigMouth.jpg";
 import BlueScreen from "../../theme/image/BlueScreen.jpg";
 import OrangeMan from "../../theme/image/OrangeMan.jpg";
 import NoteBook from "../../theme/image/NoteBook.jpg";
+import GirlFoto from "../../theme/image/ProfilFotoGirl.jpg";
+import ProfileMan from "../../theme/image/ProfileMan.jpg";
+
+import { UserProfileBox } from "../UserProfileBox/UserProfileBox";
 
 export const TimeLine = () => {
   return (
@@ -24,6 +28,25 @@ export const TimeLine = () => {
           <img src={NoteBook} alt="resim1" />
           <img src={OrangeMan} alt="resim1" />
         </S.images>
+        <S.ProfileBox>
+          <p>You might like</p>
+          <S.ProfileLine>
+            <UserProfileBox
+              name="Mushtariy"
+              email="@Mushtar565266"
+              foto={GirlFoto}
+            />
+            <button>Follow</button>
+          </S.ProfileLine>
+          <S.ProfileLine>
+            <UserProfileBox
+              name="Shuhratbek"
+              email="@mrshukhrat"
+              foto={ProfileMan}
+            />
+            <button>Follow</button>
+          </S.ProfileLine>
+        </S.ProfileBox>
       </S.Contanier>
     </>
   );

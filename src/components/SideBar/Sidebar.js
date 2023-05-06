@@ -65,7 +65,7 @@ export const Sidebar = () => {
             </span>
           </S.TweetButton>
         </nav>
-        <UserProfileBox />
+        <UserProfileBox name="Burçin" email="brcnerden@gmail.com" />
       </S.Contanier>
     </>
   );

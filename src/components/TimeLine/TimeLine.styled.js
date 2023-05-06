@@ -32,10 +32,41 @@ const images = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 11px;
+
   img {
     max-width: 123px;
     width: 100%;
+    padding: 2px;
   }
 `;
 
-export { Contanier, SearchLine, images };
+const ProfileLine = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -25px;
+  > button {
+    width: 98px;
+    height: 38px;
+    border-radius: 50px;
+    background-color: ${COLORS.black.$500};
+    color: ${COLORS.white.$500};
+    margin-top: 40px;
+  }
+`;
+const ProfileBox = styled.div`
+  max-width: 373px;
+  width: 100%;
+  background-color: ${COLORS.gray.$400};
+  border-radius: 10px;
+  > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 15px;
+    padding-left: 20px;
+  }
+`;
+
+export { Contanier, SearchLine, images, ProfileBox, ProfileLine };
