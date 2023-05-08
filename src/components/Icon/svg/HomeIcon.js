@@ -5,6 +5,7 @@ const HomeIcon = (props) => (
     width={26}
     height={24}
     fill="none"
+    viewBox="0 0 26 24"
     {...props}
   >
     <path

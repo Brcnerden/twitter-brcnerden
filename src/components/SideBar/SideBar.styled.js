@@ -27,9 +27,8 @@ const Bar = styled.li`
   padding-left: 50px;
 
   svg {
-    width: 36px;
-    height: 36px;
-    margin-bottom: -10px;
+    width: 28px;
+    height: 28px;
   }
 
   a:-webkit-any-link {

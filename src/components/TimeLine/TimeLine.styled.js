@@ -69,4 +69,36 @@ const ProfileBox = styled.div`
   }
 `;
 
-export { Contanier, SearchLine, images, ProfileBox, ProfileLine };
+const showButton = styled.div`
+  color: ${COLORS.blue.$500};
+  padding: 30px 0 25px 15px;
+`;
+
+const TrendyBox = styled.div`
+  background-color: ${COLORS.gray.$400};
+  max-width: 373px;
+  width: 100%;
+  margin-top: 20px;
+  > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  > div > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: ${COLORS.black.$500};
+  }
+`;
+
+export {
+  Contanier,
+  SearchLine,
+  images,
+  ProfileBox,
+  ProfileLine,
+  showButton,
+  TrendyBox,
+};

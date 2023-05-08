@@ -11,6 +11,8 @@ import GirlFoto from "../../theme/image/ProfilFotoGirl.jpg";
 import ProfileMan from "../../theme/image/ProfileMan.jpg";
 
 import { UserProfileBox } from "../UserProfileBox/UserProfileBox";
+import { TrendyBox } from "../TrendyBox/TrendyBox";
+import SettingIcon from "../Icon/svg/SettingIcon";
 
 export const TimeLine = () => {
   return (
@@ -46,7 +48,15 @@ export const TimeLine = () => {
             />
             <button>Follow</button>
           </S.ProfileLine>
+          <S.showButton>Show more</S.showButton>
         </S.ProfileBox>
+        <S.TrendyBox>
+          <div>
+            <p>Trends for you </p>
+            <SettingIcon />
+          </div>
+          <TrendyBox />
+        </S.TrendyBox>
       </S.Contanier>
     </>
   );
