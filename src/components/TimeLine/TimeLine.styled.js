@@ -5,6 +5,9 @@ const Contanier = styled.div`
   max-width: 572px;
   width: 100%;
   margin: 20px 0 11px 29px;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const SearchLine = styled.div`

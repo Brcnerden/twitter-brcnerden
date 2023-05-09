@@ -1,19 +1,22 @@
 import styled from "@emotion/styled";
 
-const ProfileFoto = styled.img`
-  vertical-align: middle;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+const ProfileFoto = styled.div`
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+
+  > img {
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid gray;
+  }
   @media screen and (max-width: 992px) {
-    margin-left: 50px;
-    width: 60px;
-    height: 60px;
+    margin-right: 54px;
   }
 `;
 
 const ProfileInformation = styled.div`
-  margin-top: 50px;
   display: flex;
 
   align-items: center;

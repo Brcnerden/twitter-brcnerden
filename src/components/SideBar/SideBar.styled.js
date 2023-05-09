@@ -29,6 +29,7 @@ const Bar = styled.li`
   svg {
     width: 28px;
     height: 28px;
+    margin-right: 20px;
   }
 
   a:-webkit-any-link {
@@ -67,6 +68,7 @@ const TweetButton = styled.button`
   @media screen and (max-width: 992px) {
     width: 36px;
     height: 36px;
+    margin-right: 12px;
     > div {
       display: none;
     }
@@ -103,4 +105,13 @@ const HoverStyle = styled.div`
   display: inline-block;
 `;
 
-export { Contanier, Bar, TweetButton, BirdIcon, HoverStyle };
+const ProfileBox = styled.div`
+  margin-left: 50px;
+  margin-top: 100px;
+  @media screen and (max-width: 992px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
+
+export { Contanier, Bar, TweetButton, BirdIcon, HoverStyle, ProfileBox };

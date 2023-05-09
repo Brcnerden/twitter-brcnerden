@@ -4,11 +4,13 @@ import * as S from "./UserProfileBoxstyled";
 export const UserProfileBox = ({
   name,
   email,
-  foto = "https://www.shutterstock.com/image-vector/user-login-authenticate-icon-human-260nw-1365533969.jpg",
+  foto = "https://t4.ftcdn.net/jpg/03/59/58/91/240_F_359589186_JDLl8dIWoBNf1iqEkHxhUeeOulx0wOC5.jpg",
 }) => {
   return (
     <S.ProfileInformation>
-      <S.ProfileFoto src={foto} alt="foto"></S.ProfileFoto>
+      <S.ProfileFoto>
+        <img src={foto} alt="foto" />
+      </S.ProfileFoto>
       <S.TextInformation>
         <span>{name}</span>
         <span>{email}</span>
