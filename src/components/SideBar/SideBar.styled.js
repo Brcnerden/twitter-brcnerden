@@ -101,10 +101,6 @@ const BirdIcon = styled.div`
   }
 `;
 
-const HoverStyle = styled.div`
-  display: inline-block;
-`;
-
 const ProfileBox = styled.div`
   margin-left: 50px;
   margin-top: 100px;
@@ -114,4 +110,4 @@ const ProfileBox = styled.div`
   }
 `;
 
-export { Contanier, Bar, TweetButton, BirdIcon, HoverStyle, ProfileBox };
+export { Contanier, Bar, TweetButton, BirdIcon, ProfileBox };

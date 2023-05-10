@@ -45,18 +45,25 @@ const images = styled.div`
 
 const ProfileLine = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: -25px;
+  margin-top: 40px;
+  margin-left: 12px;
+
   > button {
     width: 98px;
     height: 38px;
     border-radius: 50px;
     background-color: ${COLORS.black.$500};
     color: ${COLORS.white.$500};
-    margin-top: 40px;
   }
 `;
+
+const ProfileDiv = styled.div`
+  padding-right: 40px;
+`;
+const ProfileDiv2 = styled.div`
+  padding-right: 70px;
+`;
+
 const ProfileBox = styled.div`
   max-width: 373px;
   width: 100%;
@@ -104,4 +111,6 @@ export {
   ProfileLine,
   showButton,
   TrendyBox,
+  ProfileDiv,
+  ProfileDiv2,
 };

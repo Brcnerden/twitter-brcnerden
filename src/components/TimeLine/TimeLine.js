@@ -33,19 +33,24 @@ export const TimeLine = () => {
         <S.ProfileBox>
           <p>You might like</p>
           <S.ProfileLine>
-            <UserProfileBox
-              name="Mushtariy"
-              email="@Mushtar565266"
-              foto={GirlFoto}
-            />
+            <S.ProfileDiv>
+              <UserProfileBox
+                name="Mushtariy"
+                email="@Mushtar565266"
+                foto={GirlFoto}
+              />
+            </S.ProfileDiv>
             <button>Follow</button>
           </S.ProfileLine>
           <S.ProfileLine>
-            <UserProfileBox
-              name="Shuhratbek"
-              email="@mrshukhrat"
-              foto={ProfileMan}
-            />
+            <S.ProfileDiv2>
+              <UserProfileBox
+                name="Shuhratbek"
+                email="@mrshukhrat"
+                foto={ProfileMan}
+              />
+            </S.ProfileDiv2>
+
             <button>Follow</button>
           </S.ProfileLine>
           <S.showButton>Show more</S.showButton>
@@ -55,6 +60,8 @@ export const TimeLine = () => {
             <p>Trends for you </p>
             <SettingIcon />
           </div>
+          <TrendyBox />
+          <TrendyBox />
           <TrendyBox />
         </S.TrendyBox>
       </S.Contanier>

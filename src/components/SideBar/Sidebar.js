@@ -23,12 +23,10 @@ export const Sidebar = () => {
           <S.BirdIcon>
             <TwitterLogo />
           </S.BirdIcon>
-          <S.HoverStyle>
-            <S.Bar>
-              <HomeIcon />
-              <Link to="/">Home</Link>
-            </S.Bar>
-          </S.HoverStyle>
+          <S.Bar>
+            <HomeIcon />
+            <Link to="/">Home</Link>
+          </S.Bar>
 
           <S.Bar>
             <HangtagIcon />
