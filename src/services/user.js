@@ -9,4 +9,4 @@ const db = getFirestore(FIREBASE_APP);
 
 const createUser = async (uid, data) => setDoc(doc(db, USERS, uid), data);
 
-export { createUser };
+export { createUser, db };

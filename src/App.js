@@ -13,7 +13,14 @@ function App() {
       if (!response) {
         setUser(null);
       } else if ("uid" in response) {
-        setUser({ name: "burak" });
+        setUser({
+          name: "Burçin",
+          email: "brcnerden@gmail.com",
+          likes: [],
+          nickname: "brcn",
+          discription: "asfdh",
+          createDate: "20.08.1985",
+        });
       } else {
         setUser(null);
       }
