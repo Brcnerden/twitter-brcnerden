@@ -6,7 +6,11 @@ const Contanier = styled.div`
   min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid black;
   display: flex;
 `;
-export { Contanier };
+
+const Children = styled.div`
+  flex: 1;
+`;
+
+export { Contanier, Children };

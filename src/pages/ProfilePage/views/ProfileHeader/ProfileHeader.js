@@ -1,8 +1,8 @@
 import React from "react";
-import Arrow from "../Icon/svg/Arrow";
-import * as S from "./FeedPageProfile.styled";
+import Arrow from "../../../../components/Icon/svg/Arrow";
+import * as S from "./ProfileHeader.styled";
 
-export const FeedPageProfile = () => {
+const ProfileHeader = () => {
   return (
     <S.Contanier>
       <S.Profile>
@@ -17,3 +17,5 @@ export const FeedPageProfile = () => {
     </S.Contanier>
   );
 };
+
+export { ProfileHeader };

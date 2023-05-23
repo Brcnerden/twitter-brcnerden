@@ -3,6 +3,7 @@ import { CreateUserPage } from "../pages/CreateUserPage";
 import { HomePage } from "../pages/HomePage/HomePage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
 import { ROUTES } from "../constants/routes";
+import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
 
 const GUEST_ROUTER = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const USER_ROUTER = createBrowserRouter([
   {
     path: ROUTES.home,
     element: <HomePage />,
+  },
+  {
+    path: ROUTES.profile,
+    element: <ProfilePage />,
   },
   {
     path: "*",

@@ -9,8 +9,15 @@ const ProfileFoto = styled.div`
   ${({ editPicture }) =>
     editPicture &&
     css`
-      width: 185px;
+      max-width: 200px;
+      width: 100%;
+      margin: auto;
       height: 185px;
+      @media screen and (max-width: 992px) {
+        max-width: 150px;
+        width: 100%;
+        margin-left: 120px;
+      }
     `}
   > img {
     max-width: 100%;

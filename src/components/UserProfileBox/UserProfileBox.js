@@ -9,7 +9,7 @@ export const UserProfileBox = ({
 }) => {
   return (
     <S.ProfileInformation>
-      <S.ProfileFoto>
+      <S.ProfileFoto editPicture={editPicture}>
         <img src={foto} alt="foto" />
       </S.ProfileFoto>
       <S.TextInformation>

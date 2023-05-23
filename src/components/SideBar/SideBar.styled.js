@@ -2,112 +2,118 @@ import styled from "@emotion/styled";
 import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 350px;
+  margin: 20px 0 11px 29px;
 
-  max-width: 275px;
-  width: 100%;
-  background-color: FFFFFF;
-  margin-bottom: 5px;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 24px;
-  > nav {
-    @media screen and (max-width: 992px) {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      padding-right: 50px;
-    }
+  @media screen and (max-width: 1440px) {
+    width: 290px;
   }
-`;
-
-const Bar = styled.li`
-  display: flex;
-  margin-bottom: 30px;
-  padding-left: 50px;
-
-  svg {
-    width: 28px;
-    height: 28px;
-    margin-right: 20px;
-  }
-
-  a:-webkit-any-link {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    text-decoration: none;
-    color: ${COLORS.black.$500};
-    line-height: 24px;
-    @media screen and (max-width: 992px) {
-      display: none;
-    }
-  }
-
-  :hover {
-    background-color: #add8e6;
-    border-radius: 50px;
-    padding-right: 50px;
-    padding-top: 5px;
-  }
-`;
-
-const TweetButton = styled.button`
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  background-color: #1da1f2;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  margin-left: 20px;
-  > span {
+  @media screen and (max-width: 992px) {
     display: none;
   }
-  @media screen and (max-width: 992px) {
-    width: 36px;
-    height: 36px;
-    margin-right: 12px;
-    > div {
-      display: none;
-    }
-    > span {
-      display: flex;
-      align-items: center;
+`;
 
-      > svg {
-        fill: ${COLORS.white.$500};
-      }
-    }
+const SearchLine = styled.div`
+  max-width: 373px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: ${COLORS.gray.$300};
+  border-radius: 31px;
+  > input {
+    margin-left: 12px;
+    border: none;
+    background-color: ${COLORS.gray.$300};
+    color: ${COLORS.gray.$600};
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
   }
 `;
 
-const BirdIcon = styled.div`
-  fill: ${COLORS.blue.$500};
-  margin-bottom: 30px;
-  padding-left: 50px;
+const images = styled.div`
+  max-width: 373px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 11px;
 
-  svg {
-    display: block;
-    width: 50px;
-    height: 50px;
+  img {
+    max-width: 123px;
+    width: 100%;
+    padding: 2px;
   }
+`;
 
-  @media screen and (max-width: 992px) {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+const ProfileLine = styled.div`
+  display: flex;
+  margin-top: 40px;
+  margin-left: 12px;
+
+  > button {
+    width: 98px;
+    height: 38px;
+    border-radius: 50px;
+    background-color: ${COLORS.black.$500};
+    color: ${COLORS.white.$500};
   }
+`;
+
+const ProfileDiv = styled.div`
+  padding-right: 40px;
+`;
+const ProfileDiv2 = styled.div`
+  padding-right: 70px;
 `;
 
 const ProfileBox = styled.div`
-  margin-left: 50px;
-  margin-top: 100px;
-  @media screen and (max-width: 992px) {
-    display: flex;
-    justify-content: flex-end;
+  max-width: 373px;
+  width: 100%;
+  background-color: ${COLORS.gray.$400};
+  border-radius: 10px;
+  > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 15px;
+    padding-left: 20px;
   }
 `;
 
-export { Contanier, Bar, TweetButton, BirdIcon, ProfileBox };
+const showButton = styled.div`
+  color: ${COLORS.blue.$500};
+  padding: 30px 0 25px 15px;
+`;
+
+const TrendyBox = styled.div`
+  background-color: ${COLORS.gray.$400};
+  max-width: 373px;
+  width: 100%;
+  margin-top: 20px;
+  > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  > div > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: ${COLORS.black.$500};
+  }
+`;
+
+export {
+  Contanier,
+  SearchLine,
+  images,
+  ProfileBox,
+  ProfileLine,
+  showButton,
+  TrendyBox,
+  ProfileDiv,
+  ProfileDiv2,
+};

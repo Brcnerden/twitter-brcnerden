@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS } from "../../theme/colors";
+import { COLORS } from "../../../../theme/colors";
 
 const Banner = styled.div`
   max-width: 910px;
@@ -15,7 +15,8 @@ const ProfileFoto = styled.div`
   max-width: 150px;
   width: 100%;
   height: 150px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: lighter;
 
   > img {
     max-width: 100%;
@@ -48,4 +49,30 @@ const Description = styled.div`
   width: 1000px;
 `;
 
-export { Banner, ProfileFoto, Button, Description };
+const Follower = styled.div`
+  margin-top: 30px;
+  display: flex;
+
+  > span {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  > div {
+    margin-right: 10px;
+    font-weight: lighter;
+  }
+`;
+
+const Tweets = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 19px;
+
+  > span:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+`;
+
+export { Banner, ProfileFoto, Button, Description, Follower, Tweets };

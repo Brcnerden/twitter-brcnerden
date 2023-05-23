@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import Banner from "../../theme/image/Banner.jpg";
-import * as S from "./FeedPagePhoto.styled";
-import ProfileFoto from "../../theme/image/ProfileFoto.jpg";
-import { UserAuthContext } from "../../contextPage/UserContext";
+import Banner from "../../../../theme/image/Banner.jpg";
+import * as S from "./ProfilePhoto.styled";
+import ProfileFoto from "../../../../theme/image/ProfileFoto.jpg";
+import { UserAuthContext } from "../../../../contextPage/UserContext";
 import { UpdatePage } from "../UpdatePage";
 
-export const FeedPagePhoto = () => {
+const ProfilePhoto = () => {
   const [visible, setVisible] = useState(false);
 
   const update = () => {
@@ -30,9 +30,24 @@ export const FeedPagePhoto = () => {
           </S.Description>
         </S.ProfileFoto>
         <button onClick={update}>Edit profile</button>
-
-        <div>{visible ? <UpdatePage /> : " "}</div>
       </S.Button>
+      <S.Follower>
+        <span>6</span>
+        <div>Following</div>
+        <span>0</span>
+        <div>Followers</div>
+      </S.Follower>
+      <S.Tweets>
+        <span>Tweets</span>
+        <span>Tweets & replies</span>
+        <span>Media</span>
+        <span>Likes</span>
+      </S.Tweets>
+
+      <hr></hr>
+      <div>{visible ? <UpdatePage /> : " "}</div>
     </div>
   );
 };
+
+export { ProfilePhoto };
