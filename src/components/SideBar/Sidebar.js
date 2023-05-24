@@ -10,7 +10,7 @@ import NoteBook from "../../theme/image/NoteBook.jpg";
 import GirlFoto from "../../theme/image/ProfilFotoGirl.jpg";
 import ProfileMan from "../../theme/image/ProfileMan.jpg";
 
-import { UserProfileBox } from "../UserProfileBox/UserProfileBox";
+import { UserProfileBox } from "../../pages/ProfilePage/views/UserProfileBox/UserProfileBox";
 import { TrendyBox } from "../TrendyBox/TrendyBox";
 import SettingIcon from "../Icon/svg/SettingIcon";
 

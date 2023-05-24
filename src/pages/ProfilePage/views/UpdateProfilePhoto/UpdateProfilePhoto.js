@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./UpdatePage.styled.";
 import TwitterLogo from "../../../../components/Icon/svg/Logo";
-import { UserProfileBox } from "../../../../components/UserProfileBox/UserProfileBox";
+import { UserProfileBox } from "../UserProfileBox/UserProfileBox";
 
-export const UpdatePage = ({ editPicture }) => {
+const UpdateProfilePhoto = ({ editPicture }) => {
   return (
     <S.Body>
       <S.Contanier>
@@ -22,3 +22,5 @@ export const UpdatePage = ({ editPicture }) => {
     </S.Body>
   );
 };
+
+export { UpdateProfilePhoto };

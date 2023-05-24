@@ -2,12 +2,10 @@ import styled from "@emotion/styled";
 import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   margin: 20px 0 11px 29px;
 
-  @media screen and (max-width: 1440px) {
-    width: 290px;
-  }
   @media screen and (max-width: 992px) {
     display: none;
   }
@@ -40,7 +38,7 @@ const images = styled.div`
   margin-top: 11px;
 
   img {
-    max-width: 123px;
+    max-width: 116px;
     width: 100%;
     padding: 2px;
   }
@@ -52,11 +50,12 @@ const ProfileLine = styled.div`
   margin-left: 12px;
 
   > button {
-    width: 98px;
+    max-width: 90px;
     height: 38px;
     border-radius: 50px;
     background-color: ${COLORS.black.$500};
     color: ${COLORS.white.$500};
+    width: calc(100% - 20px);
   }
 `;
 

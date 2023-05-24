@@ -2,7 +2,12 @@ import styled from "@emotion/styled";
 import { COLORS } from "../../../../theme/colors";
 
 const Body = styled.div`
-  backdrop-filter: blur(4px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 `;
 
 const Contanier = styled.div`

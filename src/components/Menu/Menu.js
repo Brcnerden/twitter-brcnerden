@@ -12,7 +12,7 @@ import {
 } from "../Icon/svg/IconSideBar";
 import { Link } from "react-router-dom";
 import HomeIcon from "../Icon/svg/HomeIcon";
-import { UserProfileBox } from "../UserProfileBox/UserProfileBox";
+import { UserProfileBox } from "../../pages/ProfilePage/views/UserProfileBox/UserProfileBox";
 import TwitterLogo from "../Icon/svg/Logo";
 
 const Menu = () => {

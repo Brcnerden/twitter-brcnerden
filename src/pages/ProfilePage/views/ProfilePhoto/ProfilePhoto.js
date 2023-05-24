@@ -3,7 +3,7 @@ import Banner from "../../../../theme/image/Banner.jpg";
 import * as S from "./ProfilePhoto.styled";
 import ProfileFoto from "../../../../theme/image/ProfileFoto.jpg";
 import { UserAuthContext } from "../../../../contextPage/UserContext";
-import { UpdatePage } from "../UpdatePage";
+import { UpdateProfilePhoto } from "../UpdateProfilePhoto";
 
 const ProfilePhoto = () => {
   const [visible, setVisible] = useState(false);
@@ -45,7 +45,7 @@ const ProfilePhoto = () => {
       </S.Tweets>
 
       <hr></hr>
-      <div>{visible ? <UpdatePage /> : " "}</div>
+      <div>{visible ? <UpdateProfilePhoto /> : " "}</div>
     </div>
   );
 };

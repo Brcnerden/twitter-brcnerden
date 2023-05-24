@@ -1,5 +1,5 @@
 import React from "react";
-import { UserProfileBox } from "../UserProfileBox/UserProfileBox";
+import { UserProfileBox } from "../../pages/ProfilePage/views/UserProfileBox/UserProfileBox";
 import * as S from "./TweetsBox.styled";
 import Cloud from "../Icon/svg/Cloud";
 import Retweet from "../Icon/svg/Retweet";
