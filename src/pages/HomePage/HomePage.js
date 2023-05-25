@@ -1,8 +1,7 @@
-import React from "react";
-import { userSingOut } from "../../services/auth";
-import { UserAuthContext } from "../../contextPage/UserContext";
-import { useContext } from "react";
-import { Layout } from "../../components/Layout";
+import React, { useContext } from 'react';
+import { Layout } from '../../components/Layout';
+import { UserAuthContext } from '../../context/UserContext';
+import { userSingOut } from '../../services/auth';
 
 export const HomePage = () => {
   const { setUser } = useContext(UserAuthContext);
@@ -13,7 +12,7 @@ export const HomePage = () => {
         setUser(null); // eger kullanıcı başarı ile çıkış yaptıysa user 'ın boş kalır
       })
       .catch((err) => {
-        console.log("err", err);
+        console.log('err', err);
       });
   };
 

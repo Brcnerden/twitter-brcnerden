@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import { GUEST_ROUTER, USER_ROUTER } from "./router";
-import { RouterProvider } from "react-router-dom";
-import { UserAuthContext } from "./contextPage/UserContext";
-import { isUserSingIn } from "./services/auth";
+import React, { useContext, useEffect, useState } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { UserAuthContext } from './context/UserContext';
+import { GUEST_ROUTER, USER_ROUTER } from './router';
+import { isUserSingIn } from './services/auth';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -12,14 +12,14 @@ function App() {
     isUserSingIn((response) => {
       if (!response) {
         setUser(null);
-      } else if ("uid" in response) {
+      } else if ('uid' in response) {
         setUser({
-          name: "Burçin",
-          email: "brcnerden@gmail.com",
+          name: 'Burçin',
+          email: 'brcnerden@gmail.com',
           likes: [],
-          nickname: "brcn",
-          discription: "asfdh",
-          createDate: "20.08.1985",
+          nickname: 'brcn',
+          discription: 'asfdh',
+          createDate: '20.08.1985',
         });
       } else {
         setUser(null);
@@ -29,7 +29,7 @@ function App() {
     });
   }, [setUser]);
 
-  if (isLoading) return "yükleniyor";
+  if (isLoading) return 'yükleniyor';
 
   return <RouterProvider router={user ? USER_ROUTER : GUEST_ROUTER} />;
 }

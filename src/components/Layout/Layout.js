@@ -1,7 +1,7 @@
-import React from "react";
-import * as S from "./Layout.styled";
-import { Menu } from "../Menu";
-import { SideBar } from "../SideBar";
+import React from 'react';
+import { Menu } from '../Menu';
+import { SideBar } from '../SideBar';
+import * as S from './Layout.styled';
 
 export const Layout = ({ children }) => {
   return (

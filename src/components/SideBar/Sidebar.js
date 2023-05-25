@@ -7,12 +7,13 @@ import GirlFoto from '../../assest/image/ProfilFotoGirl.jpg';
 import ProfileMan from '../../assest/image/ProfileMan.jpg';
 import TwitterPage from '../../assest/image/TwitterPage.jpg';
 import blackmanfoto from '../../assest/image/blackmanfoto.jpg';
-import SearchIcon from '../../src/components/Icon/svg/SearchIcon';
 import * as S from './SideBar.styled';
 
-import SettingIcon from '../../src/components/Icon/svg/SettingIcon';
-import { TrendyBox } from '../../src/components/TrendyBox/TrendyBox';
-import { UserProfileBox } from '../../src/pages/ProfilePage/views/UserProfileBox/UserProfileBox';
+import { UserProfileBox } from '../../pages/ProfilePage/views/UserProfileBox';
+import SearchIcon from '../Icon/svg/SearchIcon';
+import SettingIcon from '../Icon/svg/SettingIcon';
+
+import { TrendyBox } from '../TrendyBox';
 
 const SideBar = () => {
   return (
