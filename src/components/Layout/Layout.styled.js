@@ -13,15 +13,18 @@ const Children = styled.div`
 `;
 
 const Main = styled.div`
-  height: 100%;
-  overflow: auto;
-  flex: 1;
+  width: 100%;
+  height: 150vh;
+  max-width: 1328px;
   display: flex;
   padding: 0 19px;
   margin-left: 290px;
-  @media screen and (min-width: 1680px) {
-    transform: translate3d(145px, 0, 0);
-    margin-left: 0;
+  transform: translate3d(145px, 0, 0);
+
+  @media screen and (max-width: 1680px) {
+    margin-left: 290;
+    transform: translate3d(0, 0, 0);
+    width: calc(100% - 290px);
   }
 `;
 

@@ -23,38 +23,57 @@ const Menu = () => {
           <S.BirdIcon>
             <TwitterLogo />
           </S.BirdIcon>
+
           <S.Bar>
-            <HomeIcon />
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <div>
+                <HomeIcon />
+                Home
+              </div>
+            </Link>
           </S.Bar>
 
           <S.Bar>
-            <HangtagIcon />
-            <Link to="/">Explore</Link>
+            <Link to="/">
+              <HangtagIcon />
+              Explore
+            </Link>
           </S.Bar>
           <S.Bar>
-            <BellIcon />
-            <Link to="/">Notifications</Link>
+            <Link to="/">
+              <BellIcon />
+              Notifications
+            </Link>
           </S.Bar>
           <S.Bar>
-            <EmailIcon />
-            <Link to="/">Messages</Link>
+            <Link to="/">
+              <EmailIcon />
+              Messages
+            </Link>
           </S.Bar>
           <S.Bar>
-            <BookMarksIcon />
-            <Link to="/">Bookmarks</Link>
+            <Link to="/">
+              <BookMarksIcon />
+              Bookmarks
+            </Link>
           </S.Bar>
           <S.Bar>
-            <TwitterBlueIcon />
-            <Link to="/">Lists</Link>
+            <Link to="/">
+              <TwitterBlueIcon />
+              Lists
+            </Link>
           </S.Bar>
           <S.Bar>
-            <ProfileIcon />
-            <Link to="/">Profile</Link>
+            <Link to="/">
+              <ProfileIcon />
+              Profile
+            </Link>
           </S.Bar>
           <S.Bar>
-            <MoreIcon />
-            <Link to="/">More</Link>
+            <Link to="/">
+              <MoreIcon />
+              More
+            </Link>
           </S.Bar>
           <S.TweetButton>
             <div>Tweet</div>
