@@ -43,7 +43,8 @@ const Icon = styled.div`
 `;
 
 const UserFoto = styled.img`
-  width: 479px;
+  max-width: 479px;
+  width: 100%;
   height: 350px;
   margin-top: 15px;
   border-radius: 20px;

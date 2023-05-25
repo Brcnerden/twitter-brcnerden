@@ -7,8 +7,10 @@ export const Layout = ({ children }) => {
   return (
     <S.Contanier>
       <Menu />
-      <S.Children>{children}</S.Children>
-      <SideBar />
+      <S.Main>
+        <S.Children>{children}</S.Children>
+        <SideBar />
+      </S.Main>
     </S.Contanier>
   );
 };

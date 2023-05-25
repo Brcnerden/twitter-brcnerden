@@ -3,20 +3,28 @@ import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-  max-width: 275px;
-  width: 100%;
   background-color: FFFFFF;
   margin-bottom: 5px;
   font-size: 15px;
   font-weight: bold;
   line-height: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 290px;
+  @media screen and (min-width: 1680px) {
+    transform: translate3d(-663px, 0, 0);
+    right: 0;
+    margin: auto;
+  }
+
   > nav {
     @media screen and (max-width: 992px) {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding-right: 50px;
+      padding-right: 29px;
     }
   }
   @media screen and (max-width: 380px) {
@@ -51,8 +59,9 @@ const Bar = styled.li`
   :hover {
     background-color: #add8e6;
     border-radius: 50px;
-    padding-right: 50px;
-    padding-top: 5px;
+    border-color: grey;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
   }
 `;
 
