@@ -1,5 +1,5 @@
 import React from "react";
-import Foto from "../../theme/image/UserFoto.jpg";
+import Foto from "../../assest/image/UserFoto.jpg";
 import { ProfilePhoto } from "./views/ProfilePhoto";
 import { ProfileHeader } from "./views/ProfileHeader";
 import { TweetsBox } from "../../components/TweetsBox";

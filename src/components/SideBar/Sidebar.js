@@ -1,14 +1,14 @@
 import React from "react";
 import * as S from "./SideBar.styled";
 import SearchIcon from "../Icon/svg/SearchIcon";
-import blackmanfoto from "../../theme/image/blackmanfoto.jpg";
-import TwitterPage from "../../theme/image/TwitterPage.jpg";
-import BigMouth from "../../theme/image/BigMouth.jpg";
-import BlueScreen from "../../theme/image/BlueScreen.jpg";
-import OrangeMan from "../../theme/image/OrangeMan.jpg";
-import NoteBook from "../../theme/image/NoteBook.jpg";
-import GirlFoto from "../../theme/image/ProfilFotoGirl.jpg";
-import ProfileMan from "../../theme/image/ProfileMan.jpg";
+import blackmanfoto from "../../assest/image/blackmanfoto.jpg";
+import TwitterPage from "../../assest/image/TwitterPage.jpg";
+import BigMouth from "../../assest/image/BigMouth.jpg";
+import BlueScreen from "../../assest/image/BlueScreen.jpg";
+import OrangeMan from "../../assest/image/OrangeMan.jpg";
+import NoteBook from "../../assest/image/NoteBook.jpg";
+import GirlFoto from "../../assest/image/ProfilFotoGirl.jpg";
+import ProfileMan from "../../assest/image/ProfileMan.jpg";
 
 import { UserProfileBox } from "../../pages/ProfilePage/views/UserProfileBox/UserProfileBox";
 import { TrendyBox } from "../TrendyBox/TrendyBox";

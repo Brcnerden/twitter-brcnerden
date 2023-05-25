@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import Banner from "../../../../theme/image/Banner.jpg";
+import Banner from "../../../../assest/image/Banner.jpg";
 import * as S from "./ProfilePhoto.styled";
-import ProfileFoto from "../../../../theme/image/ProfileFoto.jpg";
+import ProfileFoto from "../../../../assest/image/ProfileFoto.jpg";
 import { UserAuthContext } from "../../../../contextPage/UserContext";
 import { UpdateProfilePhoto } from "../UpdateProfilePhoto";
 
