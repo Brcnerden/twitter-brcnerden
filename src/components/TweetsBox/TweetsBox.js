@@ -9,7 +9,7 @@ import Statistics from "../Icon/svg/Statistics";
 
 export const TweetsBox = ({ tweets, foto, defultFoto }) => {
   return (
-    <div>
+    <S.Contanier>
       <S.UserInfo>
         <UserProfileBox />
         <p>Burçin</p>
@@ -31,7 +31,6 @@ export const TweetsBox = ({ tweets, foto, defultFoto }) => {
         <Statistics />
         <span />
       </S.Icon>
-      <hr></hr>
-    </div>
+    </S.Contanier>
   );
 };

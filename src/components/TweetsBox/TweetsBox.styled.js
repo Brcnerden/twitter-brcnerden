@@ -2,12 +2,13 @@ import styled from "@emotion/styled";
 import { COLORS } from "../../theme/colors";
 import { css } from "@emotion/react";
 
+const Contanier = styled.div`
+  border-bottom: 1px solid ${COLORS.gray.$100};
+  margin-top: 22px;
+`;
+
 const UserInfo = styled.div`
   display: flex;
-
-  > hr {
-    color: ${COLORS.gray.$200};
-  }
 
   > p {
     font-weight: bold;
@@ -37,6 +38,8 @@ const Icon = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
+
+  margin-bottom: 24px;
   > span {
     padding-right: 40px;
   }
@@ -56,4 +59,4 @@ const UserFoto = styled.img`
     `}
 `;
 
-export { UserInfo, Tweets, Icon, UserFoto };
+export { UserInfo, Tweets, Icon, UserFoto, Contanier };

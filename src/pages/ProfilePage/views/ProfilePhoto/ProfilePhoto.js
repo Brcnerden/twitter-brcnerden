@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
-import Banner from '../../../../assest/image/Banner.jpg';
-import ProfileFoto from '../../../../assest/image/ProfileFoto.jpg';
-import { UserAuthContext } from '../../../../context/UserContext';
-import { UpdateProfilePhoto } from '../UpdateProfilePhoto';
-import * as S from './ProfilePhoto.styled';
+import React, { useContext, useState } from "react";
+import Banner from "../../../../assest/image/Banner.jpg";
+import ProfileFoto from "../../../../assest/image/ProfileFoto.jpg";
+import { UserAuthContext } from "../../../../context/UserContext";
+import { UpdateProfilePhoto } from "../UpdateProfilePhoto";
+import * as S from "./ProfilePhoto.styled";
 
 const ProfilePhoto = () => {
   const [visible, setVisible] = useState(false);
@@ -17,11 +17,11 @@ const ProfilePhoto = () => {
   return (
     <div>
       <S.Banner>
-        <img src={Banner} alt='banner'></img>
+        <img src={Banner} alt="banner"></img>
       </S.Banner>
       <S.Button>
         <S.ProfileFoto>
-          <img src={ProfileFoto} alt='Foto'></img>
+          <img src={ProfileFoto} alt="Foto"></img>
           <div>{user.name}</div>
           <div>{user.email}</div>
           <S.Description>
@@ -43,9 +43,9 @@ const ProfilePhoto = () => {
         <span>Media</span>
         <span>Likes</span>
       </S.Tweets>
-
       <hr></hr>
-      <div>{visible ? <UpdateProfilePhoto /> : ' '}</div>
+
+      <div>{visible ? <UpdateProfilePhoto /> : " "}</div>
     </div>
   );
 };

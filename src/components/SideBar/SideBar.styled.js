@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import { COLORS } from '../../theme/colors';
+import styled from "@emotion/styled";
+import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
   max-width: 350px;
@@ -19,12 +19,15 @@ const SearchLine = styled.div`
   padding: 10px;
   background-color: ${COLORS.gray.$300};
   border-radius: 31px;
+  position: sticky;
+  top: -0.5px;
+  z-index: 3;
   > input {
     margin-left: 12px;
     border: none;
     background-color: ${COLORS.gray.$300};
     color: ${COLORS.gray.$600};
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
     font-size: 18px;
   }
@@ -72,7 +75,7 @@ const ProfileBox = styled.div`
   background-color: ${COLORS.gray.$400};
   border-radius: 10px;
   > p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
@@ -97,7 +100,7 @@ const TrendyBox = styled.div`
     align-items: center;
   }
   > div > p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;

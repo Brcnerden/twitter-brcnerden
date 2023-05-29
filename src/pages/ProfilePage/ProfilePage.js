@@ -4,11 +4,14 @@ import { ProfilePhoto } from "./views/ProfilePhoto";
 import { ProfileHeader } from "./views/ProfileHeader";
 import { TweetsBox } from "../../components/TweetsBox";
 import { Layout } from "../../components/Layout";
+import * as S from "./ProfilePage.styled";
 
 const ProfilePage = () => {
   return (
     <Layout>
-      <ProfileHeader />
+      <S.FixHeader>
+        <ProfileHeader />
+      </S.FixHeader>
       <ProfilePhoto />
       <TweetsBox
         defultFoto

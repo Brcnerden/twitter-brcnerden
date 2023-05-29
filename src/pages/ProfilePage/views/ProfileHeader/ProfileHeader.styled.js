@@ -3,14 +3,15 @@ import { COLORS } from "../../../../theme/colors";
 
 const Contanier = styled.div`
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: ${COLORS.white.$500};
 `;
 
 const Profile = styled.div`
   height: 57px;
   display: flex;
   align-items: center;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid ${COLORS.gray.$200};
+  border-right: 1px solid ${COLORS.gray.$200};
 
   > div {
     font-weight: 700;

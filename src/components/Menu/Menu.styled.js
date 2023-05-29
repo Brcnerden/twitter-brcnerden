@@ -36,6 +36,7 @@ const Contanier = styled.div`
 
 const Bar = styled.li`
   list-style: none;
+  margin-left: 29px;
 
   a {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -46,7 +47,6 @@ const Bar = styled.li`
     color: ${COLORS.black.$500};
     line-height: 24px;
     display: inline-block;
-    background-color: #add8e6;
     border-radius: 50px;
 
     > div {
@@ -60,12 +60,14 @@ const Bar = styled.li`
       height: 28px;
       margin-right: 20px;
     }
-
-    :hover {
+    span {
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
     }
 
-    @media screen and (max-width: 992px) {
-      display: none;
+    :hover {
+      background-color: #add8e6;
     }
   }
 `;
@@ -79,6 +81,10 @@ const TweetButton = styled.button`
   border: none;
   border-radius: 50px;
   margin-left: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 32px;
   > span {
     display: none;
   }

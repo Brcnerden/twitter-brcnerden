@@ -28,51 +28,65 @@ const Menu = () => {
             <Link to="/">
               <div>
                 <HomeIcon />
-                Home
+                <span>Home</span>
               </div>
             </Link>
           </S.Bar>
 
           <S.Bar>
             <Link to="/">
-              <HangtagIcon />
-              Explore
+              <div>
+                <HangtagIcon />
+                <span>Explore</span>
+              </div>
             </Link>
           </S.Bar>
           <S.Bar>
             <Link to="/">
-              <BellIcon />
-              Notifications
+              <div>
+                <BellIcon />
+                <span>Notifications</span>
+              </div>
             </Link>
           </S.Bar>
           <S.Bar>
             <Link to="/">
-              <EmailIcon />
-              Messages
+              <div>
+                <EmailIcon />
+                <span> Messages</span>
+              </div>
             </Link>
           </S.Bar>
           <S.Bar>
             <Link to="/">
-              <BookMarksIcon />
-              Bookmarks
+              <div>
+                <BookMarksIcon />
+                <span> Bookmarks</span>
+              </div>
             </Link>
           </S.Bar>
           <S.Bar>
             <Link to="/">
-              <TwitterBlueIcon />
-              Lists
+              <div>
+                <TwitterBlueIcon />
+                <span>Lists</span>
+              </div>
+            </Link>
+          </S.Bar>
+          <S.Bar>
+            <Link to="/profile">
+              <div>
+                <ProfileIcon />
+                <span> Profile</span>
+              </div>
             </Link>
           </S.Bar>
           <S.Bar>
             <Link to="/">
-              <ProfileIcon />
-              Profile
-            </Link>
-          </S.Bar>
-          <S.Bar>
-            <Link to="/">
-              <MoreIcon />
-              More
+              <div>
+                <MoreIcon />
+                <span>More</span>
+              </div>
             </Link>
           </S.Bar>
           <S.TweetButton>
