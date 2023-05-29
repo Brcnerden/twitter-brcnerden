@@ -5,6 +5,8 @@ import { userSingOut } from "../../services/auth";
 import { HomePageHeader } from "./views/HomePageHeader/HomePageHeader";
 import { HomePageUserTweet } from "./views/HomePageUserTweet";
 import { TweetsBox } from "../../components/TweetsBox";
+import Kebab from "../../assest/image/Kebab.jpg";
+import * as S from "./HomePage.styled";
 
 export const HomePage = () => {
   const { setUser } = useContext(UserAuthContext);
@@ -22,12 +24,24 @@ export const HomePage = () => {
   return (
     <>
       <Layout>
-        <HomePageHeader />
-        <HomePageUserTweet />
-        <TweetsBox
-          defultFoto
-          tweets="Twitterdagi ayol-erkak qarama-qarshiliginglardan o'zinglar zerikmadinglarmi?"
-        />
+        <S.Contanier>
+          <HomePageHeader />
+          <HomePageUserTweet />
+
+          <TweetsBox
+            defultFoto
+            tweets="Twitterdagi ayol-erkak qarama-qarshiliginglardan o'zinglar zerikmadinglarmi?"
+          />
+          <TweetsBox
+            defultFoto
+            tweets="YPIP dasturining bu yilgi sezoni ham o’z nihoyasiga yetmoqda. Mentorlik davomida talaba va yangi bitiruvchilarni o’sayotganini ko’rib hursand bo’ladi odam."
+          />
+          <TweetsBox
+            tweets="Обетда..... 
+            Кечиринглар"
+            foto={Kebab}
+          />
+        </S.Contanier>
       </Layout>
       <button onClick={handleLogOut}>Çıkış yap</button>
     </>

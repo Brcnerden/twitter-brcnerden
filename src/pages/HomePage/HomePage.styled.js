@@ -1,12 +1,10 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 
 const Contanier = styled.div`
-  ${({ blurPage }) =>
-    blurPage &&
-    css`
-      opacity: 0.3;
-    `}
+  @media screen and (max-width: 375px) {
+    max-width: 375px;
+    width: 100%;
+  }
 `;
 
 export { Contanier };

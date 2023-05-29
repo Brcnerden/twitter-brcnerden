@@ -51,6 +51,7 @@ const UserFoto = styled.img`
   height: 350px;
   margin-top: 15px;
   border-radius: 20px;
+  margin-left: 25px;
 
   ${({ defultFoto }) =>
     defultFoto &&
