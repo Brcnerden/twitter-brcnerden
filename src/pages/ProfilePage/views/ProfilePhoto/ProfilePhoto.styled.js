@@ -9,6 +9,11 @@ const Banner = styled.div`
     max-width: 100%;
     object-fit: cover;
   }
+
+  @media screen and (max-width: 444px) {
+    max-width: 375px;
+    width: 100%;
+  }
 `;
 
 const ProfileFoto = styled.div`

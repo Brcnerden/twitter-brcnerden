@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Layout } from "../../components/Layout";
 import { UserAuthContext } from "../../context/UserContext";
 import { userSingOut } from "../../services/auth";
-import { HomePageHeader } from "./views/HomePageHeader/HomePageHeader";
 import { HomePageUserTweet } from "./views/HomePageUserTweet";
 import { TweetsBox } from "../../components/TweetsBox";
 import Kebab from "../../assest/image/Kebab.jpg";
@@ -23,9 +22,8 @@ export const HomePage = () => {
 
   return (
     <>
-      <Layout>
+      <Layout title="Home">
         <S.Contanier>
-          <HomePageHeader />
           <HomePageUserTweet />
 
           <TweetsBox

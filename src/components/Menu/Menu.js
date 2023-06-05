@@ -14,14 +14,18 @@ import { Link } from "react-router-dom";
 import HomeIcon from "../Icon/svg/HomeIcon";
 import { UserProfileBox } from "../../pages/ProfilePage/views/UserProfileBox/UserProfileBox";
 import TwitterLogo from "../Icon/svg/Logo";
+import CloseButton from "../Icon/svg/CloseButton";
 
-const Menu = () => {
+const Menu = ({ menuOpen, handleChange }) => {
   return (
     <>
-      <S.Contanier>
+      <S.Contanier className={menuOpen ? "menuOpen" : " "}>
         <nav>
           <S.BirdIcon>
             <TwitterLogo />
+            <S.CloseButton onClick={handleChange}>
+              <CloseButton />
+            </S.CloseButton>
           </S.BirdIcon>
 
           <S.Bar>
@@ -57,7 +61,7 @@ const Menu = () => {
               </div>
             </Link>
           </S.Bar>
-          <S.Bar>
+          <S.Bar className="hidden">
             <Link to="/">
               <div>
                 <BookMarksIcon />
@@ -65,7 +69,7 @@ const Menu = () => {
               </div>
             </Link>
           </S.Bar>
-          <S.Bar>
+          <S.Bar className="hidden">
             <Link to="/">
               <div>
                 <TwitterBlueIcon />

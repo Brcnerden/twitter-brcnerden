@@ -3,7 +3,7 @@ import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: FFFFFF;
+  background-color: ${COLORS.white.$500};
   margin-bottom: 5px;
   font-size: 15px;
   font-weight: bold;
@@ -16,27 +16,46 @@ const Contanier = styled.div`
   width: 290px;
   transform: translate3d(-663px, 0, 0);
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 29px 29px;
+
   @media screen and (max-width: 1680px) {
     right: auto;
     transform: translate3d(0, 0, 0);
   }
 
+  @media screen and (max-width: 992px) {
+    width: 88px;
+  }
+  @media screen and (max-width: 444px) {
+    width: 100%;
+    max-width: 280px;
+    background-color: ${COLORS.white.$500};
+    left: 100%;
+    &.menuOpen {
+      left: 0;
+    }
+  }
+
   > nav {
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 992px) and (max-height: 650px) {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       padding-right: 29px;
     }
-  }
-  @media screen and (max-width: 380px) {
-    display: none;
+    @media screen and (max-height: 650px) {
+      .hidden {
+        visibility: hidden;
+      }
+    }
   }
 `;
 
 const Bar = styled.li`
   list-style: none;
-  margin-left: 29px;
 
   a {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -53,6 +72,10 @@ const Bar = styled.li`
       display: flex;
       align-items: center;
       padding: 10px;
+
+      @media screen and (max-height: 650px) {
+        padding: 7px;
+      }
     }
 
     svg {
@@ -61,8 +84,11 @@ const Bar = styled.li`
       margin-right: 20px;
     }
     span {
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: 1300px) {
         display: none;
+      }
+      @media screen and (max-width: 444px) {
+        display: flex;
       }
     }
 
@@ -80,7 +106,6 @@ const TweetButton = styled.button`
   color: white;
   border: none;
   border-radius: 50px;
-  margin-left: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -88,10 +113,11 @@ const TweetButton = styled.button`
   > span {
     display: none;
   }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1300px) {
     width: 36px;
     height: 36px;
-    margin-right: 12px;
+    margin-right: 27px;
+    margin-top: 15px;
     > div {
       display: none;
     }
@@ -109,7 +135,10 @@ const TweetButton = styled.button`
 const BirdIcon = styled.div`
   fill: ${COLORS.blue.$500};
   margin-bottom: 30px;
-  padding-left: 50px;
+
+  > span {
+    display: none;
+  }
 
   svg {
     display: block;
@@ -121,16 +150,32 @@ const BirdIcon = styled.div`
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 444px) {
+    align-items: center;
   }
 `;
 
 const ProfileBox = styled.div`
-  margin-left: 50px;
-  margin-top: 100px;
-  @media screen and (max-width: 992px) {
-    display: flex;
-    justify-content: flex-end;
+  @media (max-height: 650px) and (max-width: 1300px) {
+    margin-top: 15px;
+    margin-left: 90px;
+    > div > div {
+      margin-right: -54px;
+    }
   }
 `;
 
-export { Contanier, Bar, TweetButton, BirdIcon, ProfileBox };
+const CloseButton = styled.button`
+  display: none;
+  @media screen and (max-width: 444px) {
+    display: block;
+    margin-left: 200px;
+    margin-top: -25px;
+    border-style: none;
+    background-color: ${COLORS.white.$500};
+  }
+`;
+
+export { Contanier, Bar, TweetButton, BirdIcon, ProfileBox, CloseButton };

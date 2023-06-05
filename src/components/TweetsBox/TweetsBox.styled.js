@@ -52,6 +52,11 @@ const UserFoto = styled.img`
   margin-top: 15px;
   border-radius: 20px;
   margin-left: 25px;
+  @media screen and (max-width: 444px) {
+    max-width: 360px;
+    width: 100%;
+    margin-left: 7px;
+  }
 
   ${({ defultFoto }) =>
     defultFoto &&

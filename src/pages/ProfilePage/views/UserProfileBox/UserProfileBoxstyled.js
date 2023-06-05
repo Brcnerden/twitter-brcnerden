@@ -13,7 +13,7 @@ const ProfileFoto = styled.div`
       width: 100%;
       margin: auto;
       height: 185px;
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: 1300px) {
         max-width: 150px;
         width: 100%;
         margin-left: 120px;
@@ -25,7 +25,7 @@ const ProfileFoto = styled.div`
     border-radius: 50%;
     border: 2px solid gray;
   }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1300px) {
     margin-right: 54px;
   }
 `;
@@ -41,7 +41,7 @@ const ProfileInformation = styled.div`
 `;
 
 const TextInformation = styled.div`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1300px) {
     display: none;
   }
 `;
