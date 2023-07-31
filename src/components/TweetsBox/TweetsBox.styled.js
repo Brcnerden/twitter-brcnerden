@@ -30,7 +30,7 @@ const Tweets = styled.div`
   max-width: 479px;
   word-wrap: break-word;
   margin-top: -25px;
-  margin-left: 55px;
+  margin-left: 68px;
   font-size: 12px;
 `;
 
@@ -52,6 +52,7 @@ const UserFoto = styled.img`
   margin-top: 15px;
   border-radius: 20px;
   margin-left: 25px;
+  padding-right: 15px;
   @media screen and (max-width: 444px) {
     max-width: 360px;
     width: 100%;

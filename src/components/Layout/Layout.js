@@ -17,10 +17,12 @@ export const Layout = ({ title, menuOpen, children }) => {
       <Header handleChange={handleChange} />
 
       <S.Main>
-        <S.Title>
-          {title && <h1>{title}</h1>}
-          <S.Children>{children}</S.Children>
-        </S.Title>
+        <S.Line>
+          <S.Title>
+            {title && <h1>{title}</h1>}
+            <S.Children>{children}</S.Children>
+          </S.Title>
+        </S.Line>
         <SideBar />
       </S.Main>
     </S.Contanier>

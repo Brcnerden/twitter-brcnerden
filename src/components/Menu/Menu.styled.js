@@ -19,7 +19,7 @@ const Contanier = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 0 29px 29px;
+  padding: 0 0 29px 80px;
 
   @media screen and (max-width: 1680px) {
     right: auto;
@@ -158,6 +158,7 @@ const BirdIcon = styled.div`
 `;
 
 const ProfileBox = styled.div`
+  margin-right: -31px;
   @media (max-height: 650px) and (max-width: 1300px) {
     margin-top: 15px;
     margin-left: 90px;

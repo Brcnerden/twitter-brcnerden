@@ -17,7 +17,7 @@ const UpdateProfilePhoto = ({ editPicture }) => {
         <S.Picture>
           <UserProfileBox editPicture />
         </S.Picture>
-        <S.ButtonProfile>Skin for now</S.ButtonProfile>
+        <S.ButtonProfile>Skip for now</S.ButtonProfile>
       </S.Contanier>
     </S.Body>
   );

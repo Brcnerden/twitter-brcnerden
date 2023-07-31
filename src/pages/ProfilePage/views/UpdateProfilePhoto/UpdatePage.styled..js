@@ -7,7 +7,8 @@ const Body = styled.div`
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 `;
 
 const Contanier = styled.div`

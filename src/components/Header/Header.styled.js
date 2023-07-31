@@ -13,7 +13,7 @@ const MenuButton = styled.button`
   border-style: none;
   width: 50px;
   height: 50px;
-  margin: 10px 100px;
+  margin: 10px 153px;
   > img {
     object-fit: cover;
     width: 100%;
@@ -23,6 +23,4 @@ const MenuButton = styled.button`
   }
 `;
 
-const MenuOpen = styled.div``;
-
-export { Contanier, MenuButton, MenuOpen };
+export { Contanier, MenuButton };

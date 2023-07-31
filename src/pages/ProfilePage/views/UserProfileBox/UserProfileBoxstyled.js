@@ -4,8 +4,7 @@ import { css } from "@emotion/react";
 const ProfileFoto = styled.div`
   width: 50px;
   height: 50px;
-  margin-right: 10px;
-
+  margin: 0 10px;
   ${({ editPicture }) =>
     editPicture &&
     css`

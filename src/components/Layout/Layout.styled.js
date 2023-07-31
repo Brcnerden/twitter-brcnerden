@@ -3,6 +3,7 @@ import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
   width: 100%;
+
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -55,13 +56,19 @@ const Main = styled.div`
 
 const Title = styled.div`
   height: 57px;
-  border-left: 1px solid ${COLORS.gray.$100};
-  border-right: 1px solid ${COLORS.gray.$100};
+
   > h1 {
+    padding-left: 20px;
     @media screen and (max-width: 444px) {
       display: none;
     }
   }
 `;
+const Line = styled.div`
+  max-width: 574px;
+  width: 100%;
+  border-left: 0.5px solid ${COLORS.gray.$100};
+  border-right: 1px solid ${COLORS.gray.$100};
+`;
 
-export { Contanier, Children, Main, Title };
+export { Contanier, Children, Main, Title, Line };
