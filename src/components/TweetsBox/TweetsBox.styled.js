@@ -14,7 +14,11 @@ const UserInfo = styled.div`
     font-weight: bold;
     margin-top: 0;
     margin-right: 10px;
-    margin-left: -20px;
+    margin-left: -26px;
+
+    @media screen and (max-width: 1300px) {
+      margin-left: -50px;
+    }
   }
 
   > span {
@@ -56,7 +60,6 @@ const UserFoto = styled.img`
   @media screen and (max-width: 444px) {
     max-width: 360px;
     width: 100%;
-    margin-left: 7px;
   }
 
   ${({ defultFoto }) =>

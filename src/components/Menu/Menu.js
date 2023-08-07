@@ -16,7 +16,7 @@ import { UserProfileBox } from "../../pages/ProfilePage/views/UserProfileBox/Use
 import TwitterLogo from "../Icon/svg/Logo";
 import CloseButton from "../Icon/svg/CloseButton";
 
-const Menu = ({ menuOpen, handleChange }) => {
+const Menu = ({ menuOpen, handleChange, invisible }) => {
   return (
     <>
       <S.Contanier className={menuOpen ? "menuOpen" : " "}>
@@ -101,7 +101,7 @@ const Menu = ({ menuOpen, handleChange }) => {
           </S.TweetButton>
         </nav>
         <S.ProfileBox>
-          <UserProfileBox name="Burçin" email="brcnerden@gmail.com" />
+          <UserProfileBox invisible name="Burçin" email="brcnerden@gmail.com" />
         </S.ProfileBox>
       </S.Contanier>
     </>

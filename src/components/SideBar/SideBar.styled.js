@@ -38,7 +38,7 @@ const images = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 11px;
+  margin: 11px 0 10px 0;
 
   img {
     max-width: 116px;
@@ -53,20 +53,27 @@ const ProfileLine = styled.div`
   margin-left: 12px;
 
   > button {
-    max-width: 90px;
+    max-width: 100px;
     height: 38px;
     border-radius: 50px;
     background-color: ${COLORS.black.$500};
     color: ${COLORS.white.$500};
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
+    margin: 0 10px;
   }
 `;
 
 const ProfileDiv = styled.div`
   padding-right: 40px;
+  @media screen and (max-width: 1300px) {
+    padding-right: 10px;
+  }
 `;
 const ProfileDiv2 = styled.div`
   padding-right: 70px;
+  @media screen and (max-width: 1300px) {
+    padding-right: 40px;
+  }
 `;
 
 const ProfileBox = styled.div`

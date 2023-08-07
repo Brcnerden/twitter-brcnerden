@@ -25,7 +25,7 @@ const ProfileFoto = styled.div`
     border: 2px solid gray;
   }
   @media screen and (max-width: 1300px) {
-    margin-right: 54px;
+    margin-right: 32px;
   }
 `;
 
@@ -41,7 +41,9 @@ const ProfileInformation = styled.div`
 
 const TextInformation = styled.div`
   @media screen and (max-width: 1300px) {
-    display: none;
+    display: ${(props) => {
+      return props.invisible ? "none" : "block";
+    }};
   }
 `;
 

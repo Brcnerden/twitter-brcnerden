@@ -26,8 +26,14 @@ const Contanier = styled.div`
     transform: translate3d(0, 0, 0);
   }
 
+  @media screen and (max-width: 1300px) {
+    width: 50px;
+    padding-left: 20px;
+  }
+
   @media screen and (max-width: 992px) {
-    width: 88px;
+    width: 160px;
+    align-items: flex-end;
   }
   @media screen and (max-width: 444px) {
     width: 100%;
@@ -41,6 +47,8 @@ const Contanier = styled.div`
 
   > nav {
     @media screen and (max-width: 992px) and (max-height: 650px) {
+      max-width: 50px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -158,7 +166,8 @@ const BirdIcon = styled.div`
 `;
 
 const ProfileBox = styled.div`
-  margin-right: -31px;
+  margin-right: -29px;
+
   @media (max-height: 650px) and (max-width: 1300px) {
     margin-top: 15px;
     margin-left: 90px;

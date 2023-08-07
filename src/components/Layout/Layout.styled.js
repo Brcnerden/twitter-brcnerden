@@ -12,6 +12,12 @@ const Contanier = styled.div`
     max-width: 1327px;
   }
 
+  /* @media screen and (max-width: 992px) {
+    max-width: 992px;
+    width: calc(100%-100px);
+    margin: 0 auto;
+  } */
+
   @media screen and (max-width: 444px) {
     display: block;
   }
@@ -44,9 +50,10 @@ const Main = styled.div`
   }
 
   @media screen and (max-width: 1300px) {
-    margin-left: 88px;
+    margin-left: 160px;
     width: calc(100% - 88px);
   }
+
   @media screen and (max-width: 444px) {
     margin: 0;
     padding: 0;
