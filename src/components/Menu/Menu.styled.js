@@ -13,28 +13,24 @@ const Contanier = styled.div`
   right: 0;
   margin: auto;
   height: 100%;
-  width: 290px;
-  transform: translate3d(-663px, 0, 0);
+  width: 268px;
+  transform: translate3d(-655.5px, 0, 0);
   z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 0 29px 80px;
 
-  @media screen and (max-width: 1680px) {
-    right: auto;
+
+  @media screen and (max-width: 1615px) {
     transform: translate3d(0, 0, 0);
+    right: auto;
+    left: 10px;
   }
 
   @media screen and (max-width: 1300px) {
     width: 50px;
-    padding-left: 20px;
   }
 
-  @media screen and (max-width: 992px) {
-    width: 160px;
-    align-items: flex-end;
-  }
   @media screen and (max-width: 444px) {
     width: 100%;
     max-width: 280px;
@@ -188,4 +184,5 @@ const CloseButton = styled.button`
   }
 `;
 
-export { Contanier, Bar, TweetButton, BirdIcon, ProfileBox, CloseButton };
+export { Bar, BirdIcon, CloseButton, Contanier, ProfileBox, TweetButton };
+

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { Header } from "../Header/Header";
 import { Menu } from "../Menu";
 import { SideBar } from "../SideBar";
 import * as S from "./Layout.styled";
-import { Header } from "../Header/Header";
 
 export const Layout = ({ title, menuOpen, children }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -17,12 +17,10 @@ export const Layout = ({ title, menuOpen, children }) => {
       <Header handleChange={handleChange} />
 
       <S.Main>
-        <S.Line>
-          <S.Title>
-            {title && <h1>{title}</h1>}
-            <S.Children>{children}</S.Children>
-          </S.Title>
-        </S.Line>
+        <S.Content>
+          {title && <h1>{title}</h1>}
+          <S.Children>{children}</S.Children>
+        </S.Content>
         <SideBar />
       </S.Main>
     </S.Contanier>

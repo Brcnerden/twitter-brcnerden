@@ -14,6 +14,7 @@ const MenuButton = styled.button`
   width: 50px;
   height: 50px;
   margin: 10px 153px;
+display: none;
   > img {
     object-fit: cover;
     width: 100%;

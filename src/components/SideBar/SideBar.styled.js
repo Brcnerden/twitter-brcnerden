@@ -2,17 +2,22 @@ import styled from "@emotion/styled";
 import { COLORS } from "../../theme/colors";
 
 const Contanier = styled.div`
-  max-width: 350px;
-  width: 100%;
-  margin: 20px 0 11px 29px;
+  max-width: 373px;
+  overflow: hidden;
+
+
+  @media screen and (max-width: 1300px) {
+    max-width: 290px;
+  }
 
   @media screen and (max-width: 992px) {
     display: none;
   }
+  
 `;
 
 const SearchLine = styled.div`
-  max-width: 373px;
+
   width: 100%;
   display: flex;
   align-items: center;
@@ -116,13 +121,7 @@ const TrendyBox = styled.div`
 `;
 
 export {
-  Contanier,
-  SearchLine,
-  images,
-  ProfileBox,
-  ProfileLine,
-  showButton,
-  TrendyBox,
-  ProfileDiv,
-  ProfileDiv2,
+  Contanier, ProfileBox, ProfileDiv,
+  ProfileDiv2, ProfileLine, SearchLine, TrendyBox, images, showButton
 };
+
