@@ -11,7 +11,7 @@ const Banner = styled.div`
   }
 
   @media screen and (max-width: 444px) {
-    max-width: 375px;
+    max-width: 444px;
     width: 100%;
   }
 `;

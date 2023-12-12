@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 const Contanier = styled.div`
   width: 100%;
@@ -19,7 +19,6 @@ const Main = styled.div`
   display: flex;
 
   transform: translate3d(134px, 0, 0);
-
 
   @media screen and (max-width: 1615px) {
     transform: translate3d(0, 0, 0);
@@ -48,6 +47,9 @@ const Content = styled.div`
     @media screen and (max-width: 650px) {
       display: none;
     }
+  }
+  @media screen and (max-width: 650px) {
+    margin-right: 0;
   }
 `;
 

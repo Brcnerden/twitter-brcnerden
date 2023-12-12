@@ -16,8 +16,8 @@ const Contanier = styled.div`
   width: 100%;
   height: 600px;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 28%;
+  left: 35%;
   right: auto;
   bottom: auto;
   transform: translate(-50%, -50%);
@@ -25,6 +25,10 @@ const Contanier = styled.div`
   background-color: ${COLORS.white.$500};
   border-radius: 20px;
   text-align: center;
+
+  @media screen and (max-width: 1306px) {
+    left: 45%;
+  }
 
   @media screen and (max-width: 992px) {
     max-width: 376px;

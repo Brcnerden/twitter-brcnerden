@@ -31,6 +31,7 @@ const ProfileFoto = styled.div`
 
 const ProfileInformation = styled.div`
   display: flex;
+  justify-content: space-evenly;
 
   align-items: center;
   > div > span {
